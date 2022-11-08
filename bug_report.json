@@ -1,9 +1,19 @@
 {
-"number":01,
-"summary":"wrong error message",
-"description":"blablabla",
-"steps":"blablabla"
-"reproducability": "always",
-"severity":"minor"
-"priority":"normal",
+  "ID"  : 01
+  "Summary": "Files>35MB with .md not converted",
+    "Description": "Files .md with size more than 35 MB are not converted and the app performs shutdown"
+              [Exp - The application should process files up to 50 MB (inclusive)
+              Act - The application doesn’t process .md files larger than 35 MD and performs shutdown
+              Req - DS-5.1],
+    "Steps to reproduce": ["1. Place in SOURCE_DIR a file with extension .md larger than 35 MB",
+                          "2. Execute in a command line: "php converter.phar C:\converter\SOURCE_DIR C:\converter\DESTINATION_DIR"",
+                          "3. Check the absence of output converted file in the DESTINATION_DIR".
+                          "Defect -.md files larger than 35MB are not converted"],
+      "
+    "Reproducibility": "always",
+    "Severity": "critical",
+    "Priority": "high",
+    "Symptom": "missing feature",
+    "Attachments": "some link/image",
+    "Comments":"comments if any"
 }
